@@ -5,7 +5,7 @@ from controllers.comments import router as CommentsRouter
 app = FastAPI()
 
 app.include_router(TeasRouter, prefix="/api")
-app.include_router(CommentsRouter)
+app.include_router(CommentsRouter, prefix="/api")
 
 
 @app.get('/')
