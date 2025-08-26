@@ -1,9 +1,10 @@
 # serializers/comment.py
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
+from typing import Optional
 
 class CommentSchema(BaseModel):
-  id: int
+  id: Optional[int] = Field(default=None)
   content: str
 
   class Config:
